@@ -1,5 +1,8 @@
 package dominio;
-public class Contacto{
+
+import java.io.Serializable;
+
+public class Contacto implements Serializable{
     private String nombre;
     private int numeroDeTelefono;
     private Object nombres;

@@ -1,7 +1,8 @@
 package dominio;
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
-public class Libreta {
+import java.util.List; 
+public class Libreta implements Serializable{
     private String nombre;
     private List<Contacto> contactos;
 //es una funcion
@@ -24,7 +25,6 @@ public Libreta borrarContacto(Contacto c){
         this.nombre = nombre;
        contactos = new ArrayList<>();
     }
-//tambien se puede pasar objetos, void te crea te crea una funcion q no te obliga a devolver un valor
 
     public void anadirContacto(Contacto contacto){
         this.contactos.add(contacto);

@@ -9,20 +9,23 @@ import java.util.List;
 import dominio.Contacto;
 import dominio.Libreta;
 
-public class Interfaz{
 
-  //  public Interfaz(){
-   /*  ObjectInputStream obj;
+public class Interfaz{
+    private Libreta contactos;
+   public Interfaz(){
+     ObjectInputStream obj;
     File file = new File("contactos.txt");
     try{
         obj = new ObjectInputStream(new FileInputStream(file));
-        try{contactos = (ArrayList<Contacto>)obj.readObject();}catch(Exception e){System.out.println(e);}
+        try{contactos = (Libreta) obj.readObject();}catch(Exception e){System.out.println(e);}
         obj.close();
         System.out.println("leido");
     } catch(Exception e){
         System.out.println("no leido");
-        contactos = new ArrayList<>();
+        contactos = new Libreta("contactos personales");
     }
+}
+    public void grabar(){
 ObjectOutputStream obj;
             File file = new File("contactos.txt");
             try{
@@ -34,9 +37,9 @@ ObjectOutputStream obj;
                 System.out.println("Error al guardar");
                 System.out.println(e);
                 };
-*/
- //   }
-    public static void ejecutar(String[] instruccion, Libreta libreta) {
+
+   }
+    public void ejecutar(String[] instruccion, Libreta libreta) {
         if (instruccion[0].equalsIgnoreCase("mostrar" )&& instruccion.length == 1){
             mostrarLibreta(libreta);
         } else if (instruccion[0].equalsIgnoreCase("añadir") && instruccion.length == 3) {
